@@ -1,29 +1,39 @@
+import {SLEEP_TIME} from "./constants.js";
+
 export async function highlightAndSleepBubble(prev, next){
     prev.style.background = '#e7de3c';
     next.style.background = '#e7de3c';
-    await sleep(15);
+    await sleep(SLEEP_TIME);
     prev.style.background = '#E73C4E';
     next.style.background = '#E73C4E';
 }
 export async function highlightAndSleepInsertion(prev, next){
     prev.style.background = '#e7de3c';
     next.style.background = '#4de73c';
-    await sleep(1);
+    await sleep(SLEEP_TIME);
     prev.style.background = '#3c61e7';
     next.style.background = '#3c61e7';
 }
 export async function highlightAndSleepSelection(highlighted) {
     highlighted.style.background = '#e7de3c';
-    await sleep(1);
+    await sleep(SLEEP_TIME);
     highlighted.style.background = '#E73C4E';
 }
 export async function highlightAndSleepHeap(prev, next){
     prev.style.background = '#e7de3c';
     next.style.background = '#4de73c';
-    await sleep(50);
+    await sleep(SLEEP_TIME);
     prev.style.background = '#E73C4E';
     next.style.background = '#E73C4E';
 }
+export async function highlightAndSleepMerge(DOMElement, arrElement){
+    DOMElement.style.height = arrElement + 'rem';
+    DOMElement.textContent = arrElement;
+    DOMElement.style.background = '#3c61e7';
+    await sleep(SLEEP_TIME);
+}
+
+
 export function swap(element1, element2) {
     const el1Height = element1.style.height;
     const el1TextContent = element1.textContent;
