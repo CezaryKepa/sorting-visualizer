@@ -1,0 +1,29 @@
+{
+  "name": "sorting-visualizer",
+  "version": "1.0.0",
+  "description": "Simple sorting visualization app written in vanilla js.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:dev": "webpack-dev-server",
+    "build:prod": "webpack --config webpack.config.prod.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CezaryKepa/sorting-visualizer.git"
+  },
+  "author": "Cezary Kepa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CezaryKepa/sorting-visualizer/issues"
+  },
+  "homepage": "https://github.com/CezaryKepa/sorting-visualizer#readme",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "webpack": "4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

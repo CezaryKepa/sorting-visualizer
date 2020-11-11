@@ -1,11 +1,11 @@
 import * as utils from './utility/utility.js'
-import * as constants from "./utility/constants.js";
-import {selectionSort} from "./sorting-algorithms/selectionSort.js";
-import {insertionSort} from "./sorting-algorithms/insertionSort.js";
-import {bubbleSort} from "./sorting-algorithms/bubbleSort.js";
-import {heapSort} from "./sorting-algorithms/heapSort.js";
-import {mergeSort} from "./sorting-algorithms/mergeSort.js";
-import {quickSort} from "./sorting-algorithms/quickSort.js";
+import * as constants from './utility/constants.js';
+import {selectionSort} from './sorting-algorithms/selectionSort.js';
+import {insertionSort} from './sorting-algorithms/insertionSort.js';
+import {bubbleSort} from './sorting-algorithms/bubbleSort.js';
+import {heapSort} from './sorting-algorithms/heapSort.js';
+import {mergeSort} from './sorting-algorithms/mergeSort.js';
+import {quickSort} from './sorting-algorithms/quickSort.js';
 
 const sortButton = document.querySelector('a');
 const bubbleButton = document.getElementById('bubble');
@@ -15,12 +15,12 @@ const selectionButton = document.getElementById('selection');
 const quickButton = document.getElementById('quick');
 const mergeButton = document.getElementById('merge');
 const generateButton = document.getElementById('generate');
-const speedSlider = document.getElementById("speedRange");
-const sizeSlider = document.getElementById("sizeRange");
-const speedOutput = document.getElementById("speedOutput");
-const sizeOutput = document.getElementById("sizeOutput");
+const speedSlider = document.getElementById('speedRange');
+const sizeSlider = document.getElementById('sizeRange');
+const speedOutput = document.getElementById('speedOutput');
+const sizeOutput = document.getElementById('sizeOutput');
 const list = document.querySelector('ul');
-
+// Todo fix moveing array size while sorting, numbers under fixed array size
 speedOutput.innerHTML = speedSlider.value;
 sizeOutput.innerHTML = sizeSlider.value;
 
@@ -40,7 +40,7 @@ function setList() {
         array.push(utils.getRandomInt(5, 50));
     }
     for (let i = 0; i < array.length; i++) {
-        const listElement = document.createElement("li");
+        const listElement = document.createElement('li');
         listElement.id = i;
         listElement.style.height = array[i] + 'rem';
         listElement.textContent = array[i];

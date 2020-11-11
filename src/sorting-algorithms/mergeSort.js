@@ -1,8 +1,10 @@
 import * as utils from "../utility/utility.js";
 
-// Merges two subarrays of arr[].
-// First subarray is arr[l..m]
-// Second subarray is arr[m+1..r]
+/*
+ * Merges two subarrays of arr[].
+ * First subarray is arr[l..m]
+ * Second subarray is arr[m+1..r]
+ */
 async function merge(arr, l, m, r) {
     // Find sizes of two subarrays to be merged
     const n1 = m - l + 1;
@@ -12,7 +14,7 @@ async function merge(arr, l, m, r) {
     const L = [n1];
     const R = [n2];
 
-    /*Copy data to temp arrays*/
+    /* Copy data to temp arrays*/
     for (let i = 0; i < n1; ++i) {
         L[i] = arr[l + i];
     }
@@ -23,14 +25,15 @@ async function merge(arr, l, m, r) {
     /* Merge the temp arrays */
 
     // Initial indexes of first and second subarrays
-    let i = 0, j = 0;
+    let i = 0,
+j = 0;
 
     // Initial index of merged subarry array
     let k = l;
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
             const prev = document.getElementById(k);
-            await utils.highlightAndSleepMerge(prev,L[i])
+            await utils.highlightAndSleepMerge(prev, L[i])
             arr[k] = L[i];
             i++;
         } else {
@@ -45,7 +48,7 @@ async function merge(arr, l, m, r) {
     /* Copy remaining elements of L[] if any */
     while (i < n1) {
         const prev = document.getElementById(k);
-        await utils.highlightAndSleepMerge(prev,L[i])
+        await utils.highlightAndSleepMerge(prev, L[i])
         arr[k] = L[i];
         i++;
         k++;
@@ -61,8 +64,10 @@ async function merge(arr, l, m, r) {
     }
 }
 
-// Main function that sorts arr[l..r] using
-// merge()
+/*
+ * Main function that sorts arr[l..r] using
+ * Merge()
+ */
 export async function mergeSort(arr, l, r) {
     if (l < r) {
         // Find the middle point
