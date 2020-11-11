@@ -8,7 +8,6 @@ async function merge(arr, l, m, r) {
     const n1 = m - l + 1;
     const n2 = r - m;
 
-
     /* Create temp arrays */
     const L = [n1];
     const R = [n2];

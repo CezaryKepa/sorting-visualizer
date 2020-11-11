@@ -74,4 +74,37 @@ li {
     background: #E73C4E;
     color: #F4F1F5;
 }
+.sliderContainer {
+    padding-left: 1rem;
+    color: #F4F1F5;
+}
+.slider {
+    -webkit-appearance: none;
+    width:99%;
+    height: 15px;
+    border-radius: 5px;
+    background: #F4F1F5;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
 

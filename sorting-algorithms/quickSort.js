@@ -51,10 +51,12 @@ export async function quickSort(arr, low, high)
         pivot.style.background = "#3c61e7";
         // Recursively sort elements before
         // partition and after partition
-        quickSort(arr, low, pi-1);
-        quickSort(arr, pi+1, high);
+        await quickSort(arr, low, pi-1);
+        await quickSort(arr, pi+1, high);
     }else{
         const pivot = document.getElementById(high);
-        pivot.style.background = "#3c61e7";
+        if(pivot !== null) {
+            pivot.style.background = "#3c61e7";
+        }
     }
 }

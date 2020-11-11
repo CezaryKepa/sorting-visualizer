@@ -4,4 +4,11 @@ export const BUBBLE = "BUBBLE";
 export const MERGE = "MERGE";
 export const QUICK = "QUICK";
 export const HEAP = "HEAP";
-export const SLEEP_TIME = 0.1;
+export let SLEEP_TIME = 0.1;
+export let LIST_SIZE = 50;
+export function changeSleepTime(value){
+    SLEEP_TIME = value;
+}
+export function changeListSize(value){
+    LIST_SIZE = value;
+}
