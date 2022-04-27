@@ -42,7 +42,7 @@ function setList() {
     for (let i = 0; i < array.length; i++) {
         const listElement = document.createElement('li');
         listElement.id = i;
-        listElement.style.height = array[i] + 'rem';
+        listElement.style.height = array[i] * 0.75 + 'rem';
         listElement.textContent = array[i];
         listElement.style.width = 90 / constants.LIST_SIZE + '%';
         list.append(listElement);
